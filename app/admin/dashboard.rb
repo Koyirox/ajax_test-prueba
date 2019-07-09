@@ -11,13 +11,13 @@ ActiveAdmin.register_page "Dashboard" do
 
     columns do
       column do
-        panel "Reclamos Recientes" do
-          Claim.count
+        panel "Empresas Recientes" do
+          Company.count
         end
       end
        column do
-        panel "Empresas Recientes" do
-          Company.count
+        panel "Reclamos Recientes" do
+          Claim.count
         end
       end
       column do
@@ -50,3 +50,5 @@ end
     # end
 #   end # content
 # end
+
+
