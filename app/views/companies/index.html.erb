@@ -10,13 +10,15 @@
 </tr>
 </thead>
 
-<tbody id= "companies", class="table">
+<tbody id= "companies", class="table table-dark">
 <% @companies.each do |company| %>
 <tr id="<%= company.id%>">
 <td id="nombre<%= company.id %>"><%= company.name %></td>
-<td><%= link_to 'Show', company %></td>
-<td><%= link_to 'Edit', edit_company_path(company), data:{remote:true} %></td>
-<td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?', remote: true } %></td>
+
+<td><button type="button" class="btn btn-outline-secondary"><%= link_to 'Show', company %></button></td>
+
+<td><button type="button" class="btn btn-outline-warning"><%= link_to 'Edit', edit_company_path(company), data:{remote:true} %></button></td>
+<td><button type="button" class="btn btn-outline-danger"><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?', remote: true } %></td>
 </tr>
 <% end %>
 </tbody>
@@ -24,7 +26,7 @@
 
 <br>
 
-<%= link_to 'New Company', new_company_path %>
+<%# <%= link_to 'New Company', new_company_path %> 
 
 <%= form_with(model: @company) do |form| %>
 <% if @company.errors.any? %>

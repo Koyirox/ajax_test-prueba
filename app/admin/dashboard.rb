@@ -11,22 +11,22 @@ ActiveAdmin.register_page "Dashboard" do
 
     columns do
       column do
-        panel "Empresas Recientes" do
+        panel "Empresas Creadas" do
           Company.count
         end
       end
        column do
-        panel "Reclamos Recientes" do
+        panel "Reclamos hechos" do
           Claim.count
         end
       end
       column do
-        panel "Usuarios Recientes" do
+        panel "Cantidad de Usuarios" do
           User.count
         end
       end
     end
-  end # content
+  end 
 end
 
     # Here is an example of a simple dashboard with columns and panels.
